@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace Project1
 {
-    public partial class Dashboard : Form
+    public partial class FormMember : Form
     {
-        public Dashboard()
+        public FormMember()
         {
             InitializeComponent();
         }
 
-        private void btmember_Click(object sender, EventArgs e)
+        private void btdashboard_Click(object sender, EventArgs e)
         {
-            FormMember fmb = new FormMember();
-            fmb.Show();
+            Dashboard dsb = new Dashboard();
+            dsb.Show();
             this.Hide();
         }
 

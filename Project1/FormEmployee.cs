@@ -16,5 +16,33 @@ namespace Project1
         {
             InitializeComponent();
         }
+
+        private void btdashboard_Click(object sender, EventArgs e)
+        {
+            Dashboard dsb = new Dashboard();
+            dsb.Show();
+            this.Hide();
+        }
+
+        private void btmember_Click(object sender, EventArgs e)
+        {
+            FormMember fmb = new FormMember();
+            fmb.Show();
+            this.Hide();
+        }
+
+        private void btbook_Click(object sender, EventArgs e)
+        {
+            FormBook fbk = new FormBook();
+            fbk.Show();
+            this.Hide();
+        }
+
+        private void bttransaction_Click(object sender, EventArgs e)
+        {
+            FormTransaction fts = new FormTransaction();
+            fts.Show();
+            this.Hide();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Project1
 {
-    partial class Dashboard
+    partial class FormTransaction
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 547);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // btlogout
@@ -100,13 +100,13 @@
             // 
             // bttransaction
             // 
+            this.bttransaction.BackColor = System.Drawing.Color.Wheat;
             this.bttransaction.Location = new System.Drawing.Point(6, 236);
             this.bttransaction.Name = "bttransaction";
             this.bttransaction.Size = new System.Drawing.Size(188, 33);
             this.bttransaction.TabIndex = 5;
             this.bttransaction.Text = "Borrow and Return";
-            this.bttransaction.UseVisualStyleBackColor = true;
-            this.bttransaction.Click += new System.EventHandler(this.bttransaction_Click);
+            this.bttransaction.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -139,13 +139,13 @@
             // 
             // btdashboard
             // 
-            this.btdashboard.BackColor = System.Drawing.Color.Wheat;
             this.btdashboard.Location = new System.Drawing.Point(6, 51);
             this.btdashboard.Name = "btdashboard";
             this.btdashboard.Size = new System.Drawing.Size(188, 43);
             this.btdashboard.TabIndex = 1;
             this.btdashboard.Text = "Dashboard";
-            this.btdashboard.UseVisualStyleBackColor = false;
+            this.btdashboard.UseVisualStyleBackColor = true;
+            this.btdashboard.Click += new System.EventHandler(this.btdashboard_Click);
             // 
             // label1
             // 
@@ -157,15 +157,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Library App";
             // 
-            // Dashboard
+            // FormTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1027, 571);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Dashboard";
-            this.Text = "Dashboard";
+            this.Name = "FormTransaction";
+            this.Text = "FormTransaction";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
