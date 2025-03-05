@@ -69,6 +69,7 @@
             this.btlogout.TabIndex = 11;
             this.btlogout.Text = "Logout";
             this.btlogout.UseVisualStyleBackColor = true;
+            this.btlogout.Click += new System.EventHandler(this.btlogout_Click);
             // 
             // label4
             // 
@@ -102,7 +103,7 @@
             // 
             this.bttransaction.Location = new System.Drawing.Point(6, 236);
             this.bttransaction.Name = "bttransaction";
-            this.bttransaction.Size = new System.Drawing.Size(188, 33);
+            this.bttransaction.Size = new System.Drawing.Size(188, 34);
             this.bttransaction.TabIndex = 5;
             this.bttransaction.Text = "Borrow and Return";
             this.bttransaction.UseVisualStyleBackColor = true;
@@ -166,6 +167,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormBook";
             this.Text = "FormBook";
+            this.Load += new System.EventHandler(this.FormBook_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -39,6 +39,12 @@
             this.btmember = new System.Windows.Forms.Button();
             this.btdashboard = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbrole = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbname = new System.Windows.Forms.Label();
+            this.lbemail = new System.Windows.Forms.Label();
+            this.lbtgl = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +75,7 @@
             this.btlogout.TabIndex = 11;
             this.btlogout.Text = "Logout";
             this.btlogout.UseVisualStyleBackColor = true;
+            this.btlogout.Click += new System.EventHandler(this.btlogout_Click);
             // 
             // label4
             // 
@@ -157,18 +164,86 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Library App";
             // 
+            // lbrole
+            // 
+            this.lbrole.AutoSize = true;
+            this.lbrole.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbrole.Location = new System.Drawing.Point(562, 63);
+            this.lbrole.Name = "lbrole";
+            this.lbrole.Size = new System.Drawing.Size(64, 29);
+            this.lbrole.TabIndex = 1;
+            this.lbrole.Text = "Role";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(350, 229);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 29);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Name :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(350, 274);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 29);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Email :";
+            // 
+            // lbname
+            // 
+            this.lbname.AutoSize = true;
+            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbname.Location = new System.Drawing.Point(446, 229);
+            this.lbname.Name = "lbname";
+            this.lbname.Size = new System.Drawing.Size(78, 29);
+            this.lbname.TabIndex = 4;
+            this.lbname.Text = "Name";
+            // 
+            // lbemail
+            // 
+            this.lbemail.AutoSize = true;
+            this.lbemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbemail.Location = new System.Drawing.Point(446, 274);
+            this.lbemail.Name = "lbemail";
+            this.lbemail.Size = new System.Drawing.Size(74, 29);
+            this.lbemail.TabIndex = 5;
+            this.lbemail.Text = "Email";
+            // 
+            // lbtgl
+            // 
+            this.lbtgl.AutoSize = true;
+            this.lbtgl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtgl.Location = new System.Drawing.Point(218, 533);
+            this.lbtgl.Name = "lbtgl";
+            this.lbtgl.Size = new System.Drawing.Size(102, 29);
+            this.lbtgl.TabIndex = 6;
+            this.lbtgl.Text = "Tanggal";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1027, 571);
+            this.Controls.Add(this.lbtgl);
+            this.Controls.Add(this.lbemail);
+            this.Controls.Add(this.lbname);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbrole);
             this.Controls.Add(this.groupBox1);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -185,5 +260,11 @@
         private System.Windows.Forms.Button btmember;
         private System.Windows.Forms.Button btdashboard;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbrole;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbname;
+        private System.Windows.Forms.Label lbemail;
+        private System.Windows.Forms.Label lbtgl;
     }
 }

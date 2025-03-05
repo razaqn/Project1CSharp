@@ -44,5 +44,33 @@ namespace Project1
             fem.Show();
             this.Hide();
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            lbtgl.Text = DateTime.Now.ToLongDateString();
+            lbname.Text = GlobalVariable.name;
+            lbemail.Text = GlobalVariable.email;
+            if(GlobalVariable.role == 99)
+            {
+                lbrole.Text = "Selamat Datang, Atmint";
+            }
+            else
+            {
+                lbrole.Text = "Welcome Librarians!!";
+
+                label4.Hide();
+                btemployee.Hide();
+            }
+
+        }
+
+        private void btlogout_Click(object sender, EventArgs e)
+        {
+            Auth auth = new Auth();
+            auth.doLogout();
+            FormLogin formLogin = new FormLogin();
+            this.Hide();
+            formLogin.Show();
+        }
     }
 }

@@ -44,5 +44,14 @@ namespace Project1
             fts.Show();
             this.Hide();
         }
+
+        private void btlogout_Click(object sender, EventArgs e)
+        {
+            Auth auth = new Auth();
+            auth.doLogout();
+            FormLogin formLogin = new FormLogin();
+            this.Hide();
+            formLogin.Show();
+        }
     }
 }

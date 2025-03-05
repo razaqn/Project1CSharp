@@ -16,5 +16,19 @@ namespace Project1
         {
             InitializeComponent();
         }
+
+        private void btlogin_Click(object sender, EventArgs e)
+        {
+            Auth auth = new Auth();
+            auth.EmpID = txcode.Text;
+            auth.EmpPassword = txpass.Text;
+            auth.doLogin();
+            if (auth.HasilLogin == 1)
+            {
+                Dashboard dashboard = new Dashboard();
+                this.Hide();
+                dashboard.Show();
+            }
+        }
     }
 }

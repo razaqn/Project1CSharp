@@ -69,6 +69,7 @@
             this.btlogout.TabIndex = 11;
             this.btlogout.Text = "Logout";
             this.btlogout.UseVisualStyleBackColor = true;
+            this.btlogout.Click += new System.EventHandler(this.btlogout_Click);
             // 
             // label4
             // 
@@ -166,6 +167,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormMember";
             this.Text = "FormMembers";
+            this.Load += new System.EventHandler(this.FormMember_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -44,5 +44,23 @@ namespace Project1
             fem.Show();
             this.Hide();
         }
+
+        private void btlogout_Click(object sender, EventArgs e)
+        {
+            Auth auth = new Auth();
+            auth.doLogout();
+            FormLogin formLogin = new FormLogin();
+            this.Hide();
+            formLogin.Show();
+        }
+
+        private void FormMember_Load(object sender, EventArgs e)
+        {
+            if (GlobalVariable.role != 99)
+            {
+                label4.Hide();
+                btemployee.Hide();
+            }
+        }
     }
 }
