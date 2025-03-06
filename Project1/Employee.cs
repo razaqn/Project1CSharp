@@ -27,7 +27,7 @@ namespace Project1
                 koneksi.bukaKoneksi();
                 string query = "INSERT INTO users.employee VALUES (@ID, @nama, @password, @posisi, @email, @nomer_telpon)";
                 SqlCommand com = new SqlCommand(query, koneksi.con);
-                com.Parameters.AddWithValue("@ID", EmpID);
+                com.Parameters.AddWithValue("@ID", GlobalVariable.empid());
                 com.Parameters.AddWithValue("@nama", EmpName);
                 com.Parameters.AddWithValue("@password", EmpPassword);
                 com.Parameters.AddWithValue("@posisi", "0");

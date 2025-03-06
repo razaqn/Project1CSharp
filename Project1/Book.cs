@@ -28,7 +28,7 @@ namespace Project1
                 koneksi.bukaKoneksi();
                 string query = "INSERT INTO items.book VALUES (@ID, @judul, @author, @publisher, @tahun, @kategori, @stok)";
                 SqlCommand com = new SqlCommand(query, koneksi.con);
-                com.Parameters.AddWithValue("@ID", BookID);
+                com.Parameters.AddWithValue("@ID", GlobalVariable.bookid());
                 com.Parameters.AddWithValue("@judul", Title);
                 com.Parameters.AddWithValue("@author", Author);
                 com.Parameters.AddWithValue("@publisher", Publisher);

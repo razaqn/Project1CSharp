@@ -259,9 +259,19 @@
             0,
             0,
             0});
+            this.nudays.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudays.Name = "nudays";
             this.nudays.Size = new System.Drawing.Size(265, 22);
             this.nudays.TabIndex = 21;
+            this.nudays.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btgid
             // 

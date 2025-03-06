@@ -57,6 +57,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.dgemployee = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -182,6 +183,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.btdelete);
             this.panel2.Controls.Add(this.btupdate);
@@ -196,10 +198,10 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txemail);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(219, 313);
+            this.panel2.Location = new System.Drawing.Point(219, 314);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(792, 245);
+            this.panel2.Size = new System.Drawing.Size(792, 244);
             this.panel2.TabIndex = 6;
             // 
             // label10
@@ -214,7 +216,7 @@
             // 
             // btdelete
             // 
-            this.btdelete.Location = new System.Drawing.Point(523, 174);
+            this.btdelete.Location = new System.Drawing.Point(381, 174);
             this.btdelete.Margin = new System.Windows.Forms.Padding(4);
             this.btdelete.Name = "btdelete";
             this.btdelete.Size = new System.Drawing.Size(153, 50);
@@ -225,7 +227,7 @@
             // 
             // btupdate
             // 
-            this.btupdate.Location = new System.Drawing.Point(331, 174);
+            this.btupdate.Location = new System.Drawing.Point(204, 174);
             this.btupdate.Margin = new System.Windows.Forms.Padding(4);
             this.btupdate.Name = "btupdate";
             this.btupdate.Size = new System.Drawing.Size(153, 50);
@@ -236,7 +238,7 @@
             // 
             // btadd
             // 
-            this.btadd.Location = new System.Drawing.Point(139, 174);
+            this.btadd.Location = new System.Drawing.Point(31, 174);
             this.btadd.Margin = new System.Windows.Forms.Padding(4);
             this.btadd.Name = "btadd";
             this.btadd.Size = new System.Drawing.Size(153, 50);
@@ -301,6 +303,7 @@
             // 
             // txid
             // 
+            this.txid.Enabled = false;
             this.txid.Location = new System.Drawing.Point(139, 37);
             this.txid.Margin = new System.Windows.Forms.Padding(4);
             this.txid.Name = "txid";
@@ -337,8 +340,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.dgemployee);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Location = new System.Drawing.Point(219, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -349,7 +352,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(44, 30);
+            this.label11.Location = new System.Drawing.Point(4, 7);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(159, 24);
@@ -359,12 +362,24 @@
             // dgemployee
             // 
             this.dgemployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgemployee.Location = new System.Drawing.Point(4, 71);
+            this.dgemployee.Location = new System.Drawing.Point(4, 35);
             this.dgemployee.Margin = new System.Windows.Forms.Padding(4);
             this.dgemployee.Name = "dgemployee";
             this.dgemployee.RowHeadersWidth = 51;
-            this.dgemployee.Size = new System.Drawing.Size(784, 219);
+            this.dgemployee.Size = new System.Drawing.Size(784, 255);
             this.dgemployee.TabIndex = 0;
+            this.dgemployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgemployee_CellContentClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(542, 174);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 50);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormEmployee
             // 
@@ -420,5 +435,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dgemployee;
+        private System.Windows.Forms.Button button1;
     }
 }

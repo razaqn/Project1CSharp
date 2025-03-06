@@ -54,6 +54,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgmember = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgmember)).BeginInit();
@@ -185,11 +187,11 @@
             // 
             // btupdate_m
             // 
-            this.btupdate_m.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btupdate_m.Location = new System.Drawing.Point(746, 112);
+            this.btupdate_m.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btupdate_m.Location = new System.Drawing.Point(874, 42);
             this.btupdate_m.Margin = new System.Windows.Forms.Padding(4);
             this.btupdate_m.Name = "btupdate_m";
-            this.btupdate_m.Size = new System.Drawing.Size(108, 66);
+            this.btupdate_m.Size = new System.Drawing.Size(104, 39);
             this.btupdate_m.TabIndex = 29;
             this.btupdate_m.Text = "Update";
             this.btupdate_m.UseVisualStyleBackColor = true;
@@ -197,23 +199,23 @@
             // 
             // btimport_m
             // 
-            this.btimport_m.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btimport_m.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btimport_m.Location = new System.Drawing.Point(746, 41);
             this.btimport_m.Margin = new System.Windows.Forms.Padding(4);
             this.btimport_m.Name = "btimport_m";
-            this.btimport_m.Size = new System.Drawing.Size(232, 55);
+            this.btimport_m.Size = new System.Drawing.Size(108, 41);
             this.btimport_m.TabIndex = 28;
-            this.btimport_m.Text = "IMPORT";
+            this.btimport_m.Text = "Add";
             this.btimport_m.UseVisualStyleBackColor = true;
             this.btimport_m.Click += new System.EventHandler(this.btimport_m_Click);
             // 
             // btdelete_m
             // 
-            this.btdelete_m.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btdelete_m.Location = new System.Drawing.Point(874, 112);
+            this.btdelete_m.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdelete_m.Location = new System.Drawing.Point(874, 101);
             this.btdelete_m.Margin = new System.Windows.Forms.Padding(4);
             this.btdelete_m.Name = "btdelete_m";
-            this.btdelete_m.Size = new System.Drawing.Size(104, 66);
+            this.btdelete_m.Size = new System.Drawing.Size(104, 39);
             this.btdelete_m.TabIndex = 27;
             this.btdelete_m.Text = "Delete";
             this.btdelete_m.UseVisualStyleBackColor = true;
@@ -229,6 +231,7 @@
             // 
             // txid_member
             // 
+            this.txid_member.Enabled = false;
             this.txid_member.Location = new System.Drawing.Point(244, 60);
             this.txid_member.Margin = new System.Windows.Forms.Padding(4);
             this.txid_member.Name = "txid_member";
@@ -310,21 +313,46 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Wheat;
             this.panel1.Controls.Add(this.dgmember);
-            this.panel1.Location = new System.Drawing.Point(216, 207);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Location = new System.Drawing.Point(216, 148);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(805, 352);
+            this.panel1.Size = new System.Drawing.Size(805, 411);
             this.panel1.TabIndex = 17;
             // 
             // dgmember
             // 
             this.dgmember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgmember.Location = new System.Drawing.Point(4, 4);
+            this.dgmember.Location = new System.Drawing.Point(4, 39);
             this.dgmember.Margin = new System.Windows.Forms.Padding(4);
             this.dgmember.Name = "dgmember";
             this.dgmember.RowHeadersWidth = 51;
-            this.dgmember.Size = new System.Drawing.Size(797, 331);
+            this.dgmember.Size = new System.Drawing.Size(797, 366);
             this.dgmember.TabIndex = 0;
+            this.dgmember.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgmember_CellContentClick);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(4, 11);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(154, 24);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "List Of Members";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(746, 101);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 39);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormMember
             // 
@@ -332,6 +360,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1027, 571);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtmember);
             this.Controls.Add(this.btupdate_m);
             this.Controls.Add(this.btimport_m);
@@ -353,6 +382,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgmember)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -387,5 +417,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgmember;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button1;
     }
 }

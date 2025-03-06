@@ -43,14 +43,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dgbook = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nustock = new System.Windows.Forms.NumericUpDown();
+            this.nuyearp = new System.Windows.Forms.NumericUpDown();
             this.btupdate = new System.Windows.Forms.Button();
             this.btdeletebk = new System.Windows.Forms.Button();
             this.txauthor = new System.Windows.Forms.TextBox();
             this.txjudul = new System.Windows.Forms.TextBox();
             this.btimport = new System.Windows.Forms.Button();
-            this.txstock = new System.Windows.Forms.TextBox();
             this.txkategori = new System.Windows.Forms.TextBox();
-            this.txyear = new System.Windows.Forms.TextBox();
             this.txpublisher = new System.Windows.Forms.TextBox();
             this.txbkid = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,10 +60,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbook)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nustock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuyearp)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -185,8 +188,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Moccasin;
-            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.dgbook);
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(219, 12);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
@@ -196,39 +199,40 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 16);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(4, 4);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 36);
+            this.label5.Size = new System.Drawing.Size(126, 24);
             this.label5.TabIndex = 1;
-            this.label5.Text = "List Of Book\'s";
+            this.label5.Text = "List Of Books";
             // 
             // dgbook
             // 
             this.dgbook.AllowUserToAddRows = false;
             this.dgbook.AllowUserToDeleteRows = false;
             this.dgbook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbook.Location = new System.Drawing.Point(4, 70);
+            this.dgbook.Location = new System.Drawing.Point(4, 32);
             this.dgbook.Margin = new System.Windows.Forms.Padding(4);
             this.dgbook.Name = "dgbook";
             this.dgbook.ReadOnly = true;
             this.dgbook.RowHeadersWidth = 51;
-            this.dgbook.Size = new System.Drawing.Size(472, 472);
+            this.dgbook.Size = new System.Drawing.Size(472, 510);
             this.dgbook.TabIndex = 0;
             this.dgbook.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbook_CellContentClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.nustock);
+            this.panel1.Controls.Add(this.nuyearp);
             this.panel1.Controls.Add(this.btupdate);
             this.panel1.Controls.Add(this.btdeletebk);
             this.panel1.Controls.Add(this.txauthor);
             this.panel1.Controls.Add(this.txjudul);
             this.panel1.Controls.Add(this.btimport);
-            this.panel1.Controls.Add(this.txstock);
             this.panel1.Controls.Add(this.txkategori);
-            this.panel1.Controls.Add(this.txyear);
             this.panel1.Controls.Add(this.txpublisher);
             this.panel1.Controls.Add(this.txbkid);
             this.panel1.Controls.Add(this.label12);
@@ -245,13 +249,39 @@
             this.panel1.Size = new System.Drawing.Size(301, 550);
             this.panel1.TabIndex = 5;
             // 
+            // nustock
+            // 
+            this.nustock.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nustock.Location = new System.Drawing.Point(35, 406);
+            this.nustock.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.nustock.Name = "nustock";
+            this.nustock.Size = new System.Drawing.Size(229, 22);
+            this.nustock.TabIndex = 18;
+            // 
+            // nuyearp
+            // 
+            this.nuyearp.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nuyearp.Location = new System.Drawing.Point(35, 292);
+            this.nuyearp.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.nuyearp.Name = "nuyearp";
+            this.nuyearp.Size = new System.Drawing.Size(229, 22);
+            this.nuyearp.TabIndex = 17;
+            // 
             // btupdate
             // 
             this.btupdate.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btupdate.Location = new System.Drawing.Point(4, 510);
+            this.btupdate.Location = new System.Drawing.Point(4, 494);
             this.btupdate.Margin = new System.Windows.Forms.Padding(4);
             this.btupdate.Name = "btupdate";
-            this.btupdate.Size = new System.Drawing.Size(129, 26);
+            this.btupdate.Size = new System.Drawing.Size(129, 42);
             this.btupdate.TabIndex = 16;
             this.btupdate.Text = "UPDATE";
             this.btupdate.UseVisualStyleBackColor = true;
@@ -260,10 +290,10 @@
             // btdeletebk
             // 
             this.btdeletebk.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btdeletebk.Location = new System.Drawing.Point(141, 509);
+            this.btdeletebk.Location = new System.Drawing.Point(141, 494);
             this.btdeletebk.Margin = new System.Windows.Forms.Padding(4);
             this.btdeletebk.Name = "btdeletebk";
-            this.btdeletebk.Size = new System.Drawing.Size(135, 25);
+            this.btdeletebk.Size = new System.Drawing.Size(135, 42);
             this.btdeletebk.TabIndex = 15;
             this.btdeletebk.Text = "DELETE";
             this.btdeletebk.UseVisualStyleBackColor = true;
@@ -271,15 +301,17 @@
             // 
             // txauthor
             // 
-            this.txauthor.Location = new System.Drawing.Point(35, 191);
+            this.txauthor.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txauthor.Location = new System.Drawing.Point(35, 184);
             this.txauthor.Margin = new System.Windows.Forms.Padding(4);
             this.txauthor.Name = "txauthor";
-            this.txauthor.Size = new System.Drawing.Size(229, 26);
+            this.txauthor.Size = new System.Drawing.Size(229, 22);
             this.txauthor.TabIndex = 8;
             // 
             // txjudul
             // 
-            this.txjudul.Location = new System.Drawing.Point(35, 117);
+            this.txjudul.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txjudul.Location = new System.Drawing.Point(35, 109);
             this.txjudul.Margin = new System.Windows.Forms.Padding(4);
             this.txjudul.Multiline = true;
             this.txjudul.Name = "txjudul";
@@ -289,131 +321,131 @@
             // btimport
             // 
             this.btimport.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btimport.Location = new System.Drawing.Point(4, 476);
+            this.btimport.Location = new System.Drawing.Point(4, 450);
             this.btimport.Margin = new System.Windows.Forms.Padding(4);
             this.btimport.Name = "btimport";
-            this.btimport.Size = new System.Drawing.Size(129, 26);
+            this.btimport.Size = new System.Drawing.Size(129, 36);
             this.btimport.TabIndex = 14;
-            this.btimport.Text = "IMPORT";
+            this.btimport.Text = "ADD";
             this.btimport.UseVisualStyleBackColor = true;
             this.btimport.Click += new System.EventHandler(this.btimport_Click);
             // 
-            // txstock
-            // 
-            this.txstock.Location = new System.Drawing.Point(35, 442);
-            this.txstock.Margin = new System.Windows.Forms.Padding(4);
-            this.txstock.Name = "txstock";
-            this.txstock.Size = new System.Drawing.Size(229, 26);
-            this.txstock.TabIndex = 13;
-            // 
             // txkategori
             // 
-            this.txkategori.Location = new System.Drawing.Point(35, 388);
+            this.txkategori.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txkategori.Location = new System.Drawing.Point(35, 350);
             this.txkategori.Margin = new System.Windows.Forms.Padding(4);
             this.txkategori.Name = "txkategori";
-            this.txkategori.Size = new System.Drawing.Size(229, 26);
+            this.txkategori.Size = new System.Drawing.Size(229, 22);
             this.txkategori.TabIndex = 12;
-            // 
-            // txyear
-            // 
-            this.txyear.Location = new System.Drawing.Point(35, 326);
-            this.txyear.Margin = new System.Windows.Forms.Padding(4);
-            this.txyear.Name = "txyear";
-            this.txyear.Size = new System.Drawing.Size(229, 26);
-            this.txyear.TabIndex = 11;
             // 
             // txpublisher
             // 
-            this.txpublisher.Location = new System.Drawing.Point(35, 260);
+            this.txpublisher.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txpublisher.Location = new System.Drawing.Point(35, 240);
             this.txpublisher.Margin = new System.Windows.Forms.Padding(4);
             this.txpublisher.Name = "txpublisher";
-            this.txpublisher.Size = new System.Drawing.Size(229, 26);
+            this.txpublisher.Size = new System.Drawing.Size(229, 22);
             this.txpublisher.TabIndex = 9;
             // 
             // txbkid
             // 
+            this.txbkid.Enabled = false;
+            this.txbkid.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbkid.Location = new System.Drawing.Point(35, 58);
             this.txbkid.Margin = new System.Windows.Forms.Padding(4);
             this.txbkid.Name = "txbkid";
-            this.txbkid.Size = new System.Drawing.Size(229, 26);
+            this.txbkid.Size = new System.Drawing.Size(229, 22);
             this.txbkid.TabIndex = 7;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(31, 236);
+            this.label12.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(32, 220);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 19);
+            this.label12.Size = new System.Drawing.Size(61, 16);
             this.label12.TabIndex = 6;
             this.label12.Text = "Publisher";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(35, 303);
+            this.label11.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(32, 273);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(118, 19);
+            this.label11.Size = new System.Drawing.Size(94, 16);
             this.label11.TabIndex = 5;
             this.label11.Text = "Year Published";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(31, 165);
+            this.label10.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(32, 164);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 19);
+            this.label10.Size = new System.Drawing.Size(45, 16);
             this.label10.TabIndex = 4;
             this.label10.Text = "Author";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(35, 364);
+            this.label9.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(32, 330);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 19);
+            this.label9.Size = new System.Drawing.Size(59, 16);
             this.label9.TabIndex = 3;
             this.label9.Text = "Category";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(31, 418);
+            this.label8.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(32, 387);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 19);
+            this.label8.Size = new System.Drawing.Size(41, 16);
             this.label8.TabIndex = 2;
             this.label8.Text = "Stock";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(35, 94);
+            this.label7.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(32, 90);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 19);
+            this.label7.Size = new System.Drawing.Size(65, 16);
             this.label7.TabIndex = 1;
             this.label7.Text = "Title Book";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(35, 34);
+            this.label6.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(32, 38);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 19);
+            this.label6.Size = new System.Drawing.Size(53, 16);
             this.label6.TabIndex = 0;
             this.label6.Text = "Book ID";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(141, 449);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 37);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "CLEAR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormBook
             // 
@@ -434,6 +466,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgbook)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nustock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuyearp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,9 +494,7 @@
         private System.Windows.Forms.TextBox txauthor;
         private System.Windows.Forms.TextBox txjudul;
         private System.Windows.Forms.Button btimport;
-        private System.Windows.Forms.TextBox txstock;
         private System.Windows.Forms.TextBox txkategori;
-        private System.Windows.Forms.TextBox txyear;
         private System.Windows.Forms.TextBox txpublisher;
         private System.Windows.Forms.TextBox txbkid;
         private System.Windows.Forms.Label label12;
@@ -472,5 +504,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown nuyearp;
+        private System.Windows.Forms.NumericUpDown nustock;
+        private System.Windows.Forms.Button button1;
     }
 }

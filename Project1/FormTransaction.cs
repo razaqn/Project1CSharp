@@ -127,7 +127,7 @@ namespace Project1
             lbborrowr.Text = "-";
             lbduer.Text = "-";
             lbfiner.Text = "-";
-            Fine = 0;
+            Fine = 1;
         }
 
         private void txsbook_TextChanged(object sender, EventArgs e)
