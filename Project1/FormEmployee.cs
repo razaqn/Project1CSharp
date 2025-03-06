@@ -17,6 +17,23 @@ namespace Project1
             InitializeComponent();
         }
 
+        void loadData()
+        {
+            Employee emp = new Employee();
+            DataSet ds = new DataSet();
+            ds = emp.Read();
+            dgemployee.DataSource = ds;
+            dgemployee.DataMember = "pegawai";
+        }
+        void ClearData()
+        {
+            txid.Text = "";
+            txname.Text = "";
+            txpw.Text = "";
+            txemail.Text = "";
+            txphone.Text = "";
+        }
+
         private void btdashboard_Click(object sender, EventArgs e)
         {
             Dashboard dsb = new Dashboard();
@@ -52,6 +69,46 @@ namespace Project1
             FormLogin formLogin = new FormLogin();
             this.Hide();
             formLogin.Show();
+        }
+
+        private void btadd_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.EmpID = txid.Text;
+            emp.EmpName = txname.Text;
+            emp.EmpPassword = txpw.Text;
+            emp.EmpEmail = txemail.Text;
+            emp.EmpPhone = txphone.Text;
+            emp.Create();
+            loadData();
+            ClearData();
+        }
+
+        private void btupdate_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.EmpID = txid.Text;
+            emp.EmpName = txname.Text;
+            emp.EmpPassword = txpw.Text;
+            emp.EmpEmail = txemail.Text;
+            emp.EmpPhone = txphone.Text;
+            emp.Update();
+            loadData();
+            ClearData();
+        }
+
+        private void btdelete_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.EmpID = txid.Text;
+            emp.Delete();
+            loadData();
+            ClearData();
+        }
+
+        private void FormEmployee_Load(object sender, EventArgs e)
+        {
+            loadData();
         }
     }
 }
