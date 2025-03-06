@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Project1
 {
@@ -15,8 +16,28 @@ namespace Project1
         public FormEmployee()
         {
             InitializeComponent();
-        }
 
+        }
+        private void FormEmployee_Load(object sender, EventArgs e)
+        {
+            loadData();
+        }
+        void loadData()
+        {
+            Employee emp = new Employee();
+            DataSet ds = new DataSet();
+            ds = emp.Read();
+            dgemployee.DataSource = ds;
+            dgemployee.DataMember = "pegawai";
+        }
+        void ClearData()
+        {
+            txid.Text = "";
+            txname.Text = "";
+            txpw.Text = "";
+            txemail.Text = "";
+            txphone.Text = "";
+        }
         private void btdashboard_Click(object sender, EventArgs e)
         {
             Dashboard dsb = new Dashboard();
@@ -43,6 +64,52 @@ namespace Project1
             FormTransaction fts = new FormTransaction();
             fts.Show();
             this.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btadd_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.EmpID = txid.Text;
+            emp.EmpName = txname.Text;
+            emp.EmpPassword = txpw.Text;
+            emp.EmpEmail = txemail.Text;
+            emp.EmpPhone = txphone.Text;
+            emp.Create();
+            loadData();
+            ClearData();
+
+        }
+
+        private void txid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btupdate_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.EmpID = txid.Text;
+            emp.EmpName = txname.Text;
+            emp.EmpPassword = txpw.Text;
+            emp.EmpEmail = txemail.Text;
+            emp.EmpPhone = txphone.Text;
+            emp.Update();
+            loadData();
+            ClearData();
+        }
+
+        private void btdelete_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.EmpID = txid.Text;
+            emp.Delete();
+            loadData();
+            ClearData();
         }
     }
 }

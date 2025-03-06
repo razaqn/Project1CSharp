@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,28 @@ namespace Project1
         public FormMember()
         {
             InitializeComponent();
+        }
+        private void FormMember_Load(object sender, EventArgs e)
+        {
+            loadData();
+        }
+        void loadData()
+        {
+            Member mbr = new Member();
+            DataSet ds = new DataSet();
+            ds = mbr.Read();
+            dgmember.DataSource = ds;
+            dgmember.DataMember = "member";
+        }
+
+        void ClearData()
+        {
+            txid_member.Text = "";
+            txnama_member.Text = "";
+            txemail_member.Text = "";
+            txphone_member.Text = "";
+            dtmember.Text = "";
+ 
         }
 
         private void btdashboard_Click(object sender, EventArgs e)
@@ -43,6 +66,47 @@ namespace Project1
             FormEmployee fem = new FormEmployee();
             fem.Show();
             this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btimport_m_Click(object sender, EventArgs e)
+        {
+
+            Member mbr = new Member();
+            mbr.MemberID = txid_member.Text;
+            mbr.MemberName = txnama_member.Text;
+            mbr.MemberEmail = txemail_member.Text;
+            mbr.MemberPhone = txphone_member.Text;
+            mbr.JoinDate = Convert.ToDateTime(dtmember.Value); 
+            mbr.Create();
+            loadData();
+            ClearData();
+        }
+
+        private void btupdate_m_Click(object sender, EventArgs e)
+        {
+            Member mbr = new Member();
+            mbr.MemberID = txid_member.Text;
+            mbr.MemberName = txnama_member.Text;
+            mbr.MemberEmail = txemail_member.Text;
+            mbr.MemberPhone = txphone_member.Text;
+            mbr.JoinDate = Convert.ToDateTime(dtmember.Value);
+            mbr.Update();
+            loadData();
+            ClearData();
+        }
+
+        private void btdelete_m_Click(object sender, EventArgs e)
+        {
+            Member mbr = new Member();
+            mbr.MemberID = txid_member.Text;
+            mbr.Delete();
+            loadData();
+            ClearData();
         }
     }
 }
