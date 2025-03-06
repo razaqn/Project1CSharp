@@ -29,6 +29,9 @@ namespace Project1
 
         void ClearData()
         {
+            btdeletebk.Enabled = false;
+            btupdate.Enabled = false;
+            btimport.Enabled = true;
             txbkid.Text = "";
             txjudul.Text = "";
             txauthor.Text = "";
@@ -78,6 +81,9 @@ namespace Project1
         private void FormBook_Load(object sender, EventArgs e)
         {
             loadData();
+            btdeletebk.Enabled = false;
+            btupdate.Enabled = false;
+            btimport.Enabled = true;
             if (GlobalVariable.role != 99)
             {
                 label4.Hide();
@@ -179,6 +185,9 @@ namespace Project1
                 nuyearp.Value = Convert.ToInt32(dgbook.Rows[e.RowIndex].Cells[4].Value.ToString());
                 txkategori.Text = dgbook.Rows[e.RowIndex].Cells[5].Value.ToString();
                 nustock.Value = Convert.ToInt32(dgbook.Rows[e.RowIndex].Cells[6].Value.ToString());
+                btdeletebk.Enabled = true;
+                btupdate.Enabled = true;
+                btimport.Enabled = false;
             }
         }
     }

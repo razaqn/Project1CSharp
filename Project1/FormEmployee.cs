@@ -42,6 +42,9 @@ namespace Project1
             txpw.Text = "";
             txemail.Text = "";
             txphone.Text = "";
+            btupdate.Enabled = false;
+            btdelete.Enabled = false;
+            btadd.Enabled = true;
         }
 
         private void btdashboard_Click(object sender, EventArgs e)
@@ -148,6 +151,9 @@ namespace Project1
 
         private void FormEmployee_Load(object sender, EventArgs e)
         {
+            btupdate.Enabled = false;
+            btdelete.Enabled = false;
+            btadd.Enabled = true;
             loadData();
         }
 
@@ -160,6 +166,9 @@ namespace Project1
                 txpw.Text = dgemployee.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txemail.Text = dgemployee.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txphone.Text = dgemployee.Rows[e.RowIndex].Cells[5].Value.ToString();
+                btupdate.Enabled = true;
+                btdelete.Enabled = true;
+                btadd.Enabled = false;
             }
         }
 

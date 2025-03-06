@@ -36,7 +36,9 @@ namespace Project1
             txemail_member.Text = "";
             txphone_member.Text = "";
             dtmember.Text = "";
-
+            btupdate_m.Enabled = false;
+            btdelete_m.Enabled = false;
+            btimport_m.Enabled = true;
         }
 
         private void btdashboard_Click(object sender, EventArgs e)
@@ -79,6 +81,9 @@ namespace Project1
         private void FormMember_Load(object sender, EventArgs e)
         {
             loadData();
+            btupdate_m.Enabled = false;
+            btdelete_m.Enabled = false;
+            btimport_m.Enabled = true;
             if (GlobalVariable.role != 99)
             {
                 label4.Hide();
@@ -177,6 +182,9 @@ namespace Project1
                 txemail_member.Text = dgmember.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txphone_member.Text = dgmember.Rows[e.RowIndex].Cells[3].Value.ToString();
                 dtmember.Text = dgmember.Rows[e.RowIndex].Cells[4].Value.ToString();
+                btupdate_m.Enabled = true;
+                btdelete_m.Enabled = true;
+                btimport_m.Enabled = false;
             }
         }
     }
